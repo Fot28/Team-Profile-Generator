@@ -18,21 +18,49 @@ function promptManager() {
 			type: "input",
 			name: "name",
 			message: "Manager's name:",
+			validate: function (input) {
+				if (!/^[A-Za-z]+$/.test(input)) {
+					return "Please enter a valid name containing only letters.";
+				}
+				return true;
+			},
+			filter: function (input) {
+				// Capitalize the first letter and convert the rest to lowercase
+				return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+			},
 		},
 		{
 			type: "input",
 			name: "id",
 			message: "Manager's ID:",
+			validate: function (input) {
+				if (!/^[1-9]\d*$/.test(input)) {
+					return "Please enter a valid ID (must be a positive integer).";
+				}
+				return true;
+			},
 		},
 		{
 			type: "input",
 			name: "email",
 			message: "Manager's email:",
+			validate: function (input) {
+				if (!/\S+@\S+\.\S+/.test(input)) {
+					return "Please enter a valid email address.";
+				}
+				return true;
+			},
 		},
 		{
 			type: "input",
 			name: "officeNumber",
 			message: "Manager's office number:",
+			validate: function (input) {
+				if (!/^[1-9]\d*$/.test(input)) {
+					return "Please enter a valid office number (must be a positive integer).";
+				}
+				return true;
+			},
 		},
 	]);
 }
@@ -46,21 +74,49 @@ function promptEngineer() {
 			type: "input",
 			name: "name",
 			message: "Engineer's name:",
+			validate: function (input) {
+				if (!/^[A-Za-z]+$/.test(input)) {
+					return "Please enter a valid name containing only letters.";
+				}
+				return true;
+			},
+			filter: function (input) {
+				// Capitalize the first letter and convert the rest to lowercase
+				return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+			},
 		},
 		{
 			type: "input",
 			name: "id",
 			message: "Engineer's ID:",
+			validate: function (input) {
+				if (!/^[1-9]\d*$/.test(input)) {
+					return "Please enter a valid ID (must be a positive integer).";
+				}
+				return true;
+			},
 		},
 		{
 			type: "input",
 			name: "email",
 			message: "Engineer's email:",
+			validate: function (input) {
+				if (!/\S+@\S+\.\S+/.test(input)) {
+					return "Please enter a valid email address.";
+				}
+				return true;
+			},
 		},
 		{
 			type: "input",
 			name: "github",
 			message: "Engineer's GitHub username:",
+			validate: function (input) {
+				if (input.trim().length === 0) {
+					return "Please enter a valid GitHub username.";
+				}
+				return true;
+			},
 		},
 	]);
 }
@@ -74,21 +130,49 @@ function promptIntern() {
 			type: "input",
 			name: "name",
 			message: "Intern's name:",
+			validate: function (input) {
+				if (!/^[A-Za-z]+$/.test(input)) {
+					return "Please enter a valid name containing only letters.";
+				}
+				return true;
+			},
+			filter: function (input) {
+				// Capitalize the first letter and convert the rest to lowercase
+				return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+			},
 		},
 		{
 			type: "input",
 			name: "id",
 			message: "Intern's ID:",
+			validate: function (input) {
+				if (!/^[1-9]\d*$/.test(input)) {
+					return "Please enter a valid ID (must be a positive integer).";
+				}
+				return true;
+			},
 		},
 		{
 			type: "input",
 			name: "email",
 			message: "Intern's email:",
+			validate: function (input) {
+				if (!/\S+@\S+\.\S+/.test(input)) {
+					return "Please enter a valid email address.";
+				}
+				return true;
+			},
 		},
 		{
 			type: "input",
 			name: "school",
 			message: "Intern's school:",
+			validate: function (input) {
+				if (input.trim().length === 0) {
+					return "Please enter a valid school name.";
+				}
+				return true;
+			},
 		},
 	]);
 }
