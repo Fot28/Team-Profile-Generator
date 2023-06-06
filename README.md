@@ -29,10 +29,6 @@ The generated webpage provides an easy-to-read summary of your team's members, m
 4. Follow the prompts to enter information about the team manager and other team members.
 5. When finished, the application generates an HTML file in the `output` folder, displaying the team profile.
 
-## Contributing
-
-Contributions to the Team Profile Generator are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
-
 ## Tests
 
 To run the unit tests for the application, execute the following command in the project's root directory:
